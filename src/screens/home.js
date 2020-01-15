@@ -9,15 +9,21 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-        <Button
-          title="Scan OR Code"
-          onPress={() => this.props.navigation.navigate('QrcodeScreen')}
-        />
-        <Button
-          title="View Logs"
-          onPress={() => this.props.navigation.navigate('DetaisListScreen')}
-        />   
+        <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+           <Text>Access Logging</Text>
+        </View>
+        <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+            <Button
+              title="Scan OR"
+              onPress={() => this.props.navigation.navigate('QrcodeScreen')}
+            />
+        </View>
+        <View style={{flex:1,alignItems:'center',justifyContent:'flex-start'}}>
+            <Button
+              title="Walk-in visitors"
+              onPress={() => this.props.navigation.navigate('WalkinVisitorsScreen')}
+            />   
+        </View>
       </View>
     );
   }
